@@ -13,7 +13,7 @@ with open('HISTORY.md') as history_file:
 
 setup_args = dict(
     name="latis-image-proccessing",  # Replace with your own username
-    version="0.0.13",
+    version="0.0.14",
     author="Mohamed Amine",
     author_email="hiddentn@outlook.com",
     description="LATIS image processing utilities for python",
@@ -25,7 +25,7 @@ setup_args = dict(
         "License :: OSI Approved :: MIT License",
         "Operating System :: Microsoft :: Windows"],
 
-    python_requires='==3.7',
+    python_requires='>=3.0',
     packages=find_packages(),
     data_files=[
         ('lib/site-packages/gdcmlib', glob("external/gdcmlib/*")),

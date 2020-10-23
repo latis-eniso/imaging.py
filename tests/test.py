@@ -1,7 +1,8 @@
 import sys
-sys.path.append("external")
+from latis.ImageProcessing.ImageIO import ImageIO
 
 
-from latis.ImageProccessing.ImageIO import ImageIO
-image = ImageIO.loadImage("image-000002.dcm")
+
+#  Simple Image Loading Test
+image = ImageIO.loadImage("test_images/image-000002.dcm")
 print(image)

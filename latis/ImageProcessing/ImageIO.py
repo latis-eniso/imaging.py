@@ -5,7 +5,6 @@ import pydicom
 from pydicom.encaps import encapsulate
 from pydicom.uid import JPEG2000, RLELossless, ImplicitVRLittleEndian
 
-pydicom.config.image_handlers = ['gdcm_handler']
 class ImageIO:
     # private
     @staticmethod
