@@ -11,7 +11,7 @@ pip install latis-image-proccessing
 #### Linux
 ```
 sudo apt-get install python3-gdcm
-pip install latis-image-proccessing
+( pip / pip3 ) install latis-image-proccessing
 ```
 
 

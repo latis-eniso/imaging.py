@@ -14,7 +14,7 @@ with open('HISTORY.md') as history_file:
 
 setup_args = dict(
     name="latis-image-proccessing",  # Replace with your own username
-    version="0.0.15",
+    version="0.0.16",
     author="Mohamed Amine",
     author_email="hiddentn@outlook.com",
     description="LATIS image processing utilities for python",
@@ -35,8 +35,8 @@ install_requires = [
     'Pillow'
 ]
 
-if sys.platform.startswith("win"):
-    install_requires.append('latis-gdcm-win')
+# if sys.platform.startswith("win"):
+#     install_requires.append('latis-gdcm-win')
 
 if __name__ == '__main__':
     setup(**setup_args, install_requires=install_requires,
