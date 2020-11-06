@@ -34,9 +34,6 @@ install_requires = [
     'Pillow'
 ]
 
-# if sys.platform.startswith("win"):
-#     install_requires.append('latis-gdcm-win')
-
 if __name__ == '__main__':
     setup(**setup_args, install_requires=install_requires,
-          include_package_data=True)
+          include_package_data=True, test_suite='nose.collector', tests_require=['nose'])

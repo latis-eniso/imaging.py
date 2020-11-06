@@ -1,11 +1,13 @@
 {
   "name": "imaging.py",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/latis-eniso/imaging.py.git",
   "author": "Mohamed Amine <Hiddentn@outlook.com>",
   "license": "MIT",
   "scripts": { 
-    "install-dev" : "python setup.py develop"
+    "install-dev" : "python setup.py develop",
+    "test" : "python setup.py test"
+
+    
   }
 }

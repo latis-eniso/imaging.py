@@ -1,6 +1,12 @@
-class Image(object):
+import pydicom
 
-    def __init__(self, pixelData, cols, rows, dataset):
+
+class Image(object):
+    """
+    image container representing an image
+
+    """
+    def __init__(self, pixelData, cols:int, rows:int, dataset:pydicom.Dataset):
         self.pixelData = pixelData
         self.height = cols
         self.width = rows
@@ -9,4 +15,4 @@ class Image(object):
 
     @property
     def dtype(self):
-        return self.pixelData.dtype
+        return self.pixelData.dtype.name
