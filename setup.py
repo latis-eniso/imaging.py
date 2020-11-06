@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 from glob import glob
+import sys
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -13,7 +14,7 @@ with open('HISTORY.md') as history_file:
 
 setup_args = dict(
     name="latis-image-proccessing",  # Replace with your own username
-    version="0.0.15",
+    version="0.0.16",
     author="Mohamed Amine",
     author_email="hiddentn@outlook.com",
     description="LATIS image processing utilities for python",
@@ -21,18 +22,10 @@ setup_args = dict(
     long_description_content_type="text/markdown",
     url="http://www.latis-eniso.org/",
     classifiers=[
-        "Programming Language :: Python :: 3.7",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: Microsoft :: Windows"],
-
+        "Programming Language :: Python :: 3.0",
+        "License :: OSI Approved :: MIT License"],
     python_requires='>=3.0',
     packages=find_packages(),
-    data_files=[
-        ('lib/site-packages/gdcmlib', glob("external/gdcmlib/*")),
-        ('lib\\site-packages\\', ["external\\gdcm.py"])
-    ],
-    test_suite='nose.collector',
-    tests_require=['nose', 'nose-cover3'],
 )
 
 install_requires = [
@@ -40,6 +33,9 @@ install_requires = [
     'numpy',
     'Pillow'
 ]
+
+# if sys.platform.startswith("win"):
+#     install_requires.append('latis-gdcm-win')
 
 if __name__ == '__main__':
     setup(**setup_args, install_requires=install_requires,
