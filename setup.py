@@ -13,7 +13,7 @@ with open('HISTORY.md') as history_file:
 
 setup_args = dict(
     name="latis-image-proccessing",  # Replace with your own username
-    version="0.0.14",
+    version="0.0.15",
     author="Mohamed Amine",
     author_email="hiddentn@outlook.com",
     description="LATIS image processing utilities for python",
@@ -31,6 +31,8 @@ setup_args = dict(
         ('lib/site-packages/gdcmlib', glob("external/gdcmlib/*")),
         ('lib\\site-packages\\', ["external\\gdcm.py"])
     ],
+    test_suite='nose.collector',
+    tests_require=['nose', 'nose-cover3'],
 )
 
 install_requires = [

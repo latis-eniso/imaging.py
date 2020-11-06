@@ -5,3 +5,8 @@ class Image(object):
         self.height = cols
         self.width = rows
         self.dataset = dataset
+
+
+    @property
+    def dtype(self):
+        return self.pixelData.dtype
