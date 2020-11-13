@@ -14,7 +14,7 @@ with open('HISTORY.md') as history_file:
 
 setup_args = dict(
     name="latis-image-proccessing",  # Replace with your own username
-    version="0.0.18",
+    version="0.0.19",
     author="Mohamed Amine",
     author_email="hiddentn@outlook.com",
     description="LATIS image processing utilities for python",
