@@ -29,7 +29,7 @@ class ImageIO:
         return Image(pixel_array, cols, rows, ds)
 
     @staticmethod
-    def buildFile(image):
+    def saveImage(image):
         # TODO : edit height and width elements
         dataset = ImageIO.buildDataSetImplicitVRLittleEndian(image)
         return ImageIO.write_dataset_to_bytes(dataset)
@@ -78,3 +78,7 @@ class ImageIO:
             memory_dataset.seek(0)
             # read the contents as bytes
             return memory_dataset.read()
+
+    @staticmethod
+    def toJSON(image:Image):
+        return image.dataset.to_json_dict()
