@@ -6,8 +6,9 @@
   "license": "MIT",
   "scripts": { 
     "install-dev" : "python setup.py develop",
-    "test" : "python setup.py test"
-
-    
+    "test" : "python setup.py test",
+    "build" : "python setup.py sdist bdist_wheel",
+    "publish": "twine upload dist/*",
+    "freeze" : "pip freeze > requirements.txt"
   }
 }
